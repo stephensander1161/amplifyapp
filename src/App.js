@@ -10,6 +10,7 @@ function App() {
 <<<<<<< Updated upstream
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          I love you maria
         </p>
         <a
           className="App-link"
