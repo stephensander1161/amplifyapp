@@ -14,7 +14,9 @@ class NavBar extends Component {
     render() {
         return(
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">You Stink<i className="fab fa-react"></i></h1>
+                <div className="navbar-container">
+                <h1 className="navbar-logo"><i className="fab fa-react"></i> &nbsp;Stephen Sander</h1>
+                <h4 className="navbar-subtitle">Made front and back by me with React and AWS</h4>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
 
@@ -31,7 +33,8 @@ class NavBar extends Component {
                         )
                     })}
                 </ul>
-                <Button>Sign Up</Button>
+                </div>
+                <Button>Blog</Button>
             </nav>
 
         )

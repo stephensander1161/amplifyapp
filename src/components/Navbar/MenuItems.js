@@ -1,27 +1,28 @@
 export const MenuItems = [
     {
         title: 'Home',
-        url: '#',
+        url: '/',
         cName: 'nav-links'
     },
     {
-        title: 'Services',
-        url: '#',
+        title: 'Angular App',
+        url: 'https://google.ca',
         cName: 'nav-links'
     },
     {
-        title: 'Products',
-        url: '#',
+        title: 'Observer',
+        url: 'https://www.observermovie.ca/',
         cName: 'nav-links'
     },
     {
-        title: 'Contact Us',
-        url: '#',
+        title: 'Weddings',
+        url: 'https://www.tfpweddings.ca/',
         cName: 'nav-links'
     },
+    
     {
         title: 'Sign Up',
-        url: '#',
+        url: '/sign-up',
         cName: 'nav-links-mobile'
     },
 

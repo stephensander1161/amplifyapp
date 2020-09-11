@@ -1,6 +1,6 @@
 .NavbarItems {
     background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73,63,252,1) 100%);
-    height: 80px;
+    height: 120px;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -12,6 +12,17 @@
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
+}
+
+
+.navbar-subtitle {
+   
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+
+
 }
 
 .fa-react {
@@ -60,6 +71,10 @@
     
 }
 
+Button {
+    margin-top: 50px;
+}
+
 @media screen and (max-width: 960px) {
     .NavbarItems {
         position: relative; 
@@ -102,8 +117,19 @@
         position: absolute;
         top: 0;
         left: 0; 
-        transform: translate(25%, 50%);
+        transform: translate(0%, 50%);
     }
+
+    .navbar-subtitle {
+   
+        position: absolute;
+        top: 0;
+        left: 0; 
+        transform: translate(0%, 250%);
+    
+    
+    }
+
 
     .menu-icon {
         display: block;
@@ -142,5 +168,6 @@
     Button {
         display: none; 
         
+
     }
 }
