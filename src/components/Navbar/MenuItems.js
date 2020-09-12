@@ -6,7 +6,7 @@ export const MenuItems = [
     },
     {
         title: 'Angular App',
-        url: 'https://google.ca',
+        url: 'https://master.d15iljydtuotsc.amplifyapp.com/',
         cName: 'nav-links'
     },
     {
