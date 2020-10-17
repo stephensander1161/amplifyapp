@@ -5,8 +5,8 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Angular App',
-        url: 'https://master.d15iljydtuotsc.amplifyapp.com/',
+        title: 'Elastic Beanstalk',
+        url: 'http://musicianapp-env.eba-mcmzpdzs.ca-central-1.elasticbeanstalk.com/',
         cName: 'nav-links'
     },
     {
