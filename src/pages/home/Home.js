@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { createTodo } from '../../graphql/mutations';
 import { listTodos } from '../../graphql/queries';
+import Hero from '../../components/Hero';
 
 import awsExports from '../../aws-exports';
+import { Jumbotron } from 'react-bootstrap';
 Amplify.configure(awsExports);
 
 const initialState = { name: '', description: '' };
 
-const Home = () => {
+const Home = (props) => {
 	const [ formState, setFormState ] = useState(initialState);
 	const [ todos, setTodos ] = useState([]);
 
@@ -43,29 +45,33 @@ const Home = () => {
 	}
 
 	return (
-		<div style={styles.container}>
-			<h2>Shopping List</h2>
-			<input
-				onChange={(event) => setInput('name', event.target.value)}
-				style={styles.input}
-				value={formState.name}
-				placeholder="Name"
-			/>
-			<input
-				onChange={(event) => setInput('description', event.target.value)}
-				style={styles.input}
-				value={formState.description}
-				placeholder="Description"
-			/>
-			<button disabled style={styles.button} onClick={addTodo}>
-				Create Item
-			</button>
-			{todos.map((todo, index) => (
-				<div key={todo.id ? todo.id : index} style={styles.todo}>
-					<p style={styles.todoName}>{todo.name}</p>
-					<p style={styles.todoDescription}>{todo.description}</p>
-				</div>
-			))}
+		<div>
+			<Hero title={props.title} subTitle={props.subTitle} text={props.text} />
+
+			<div style={styles.container}>
+				<h2>Shopping List</h2>
+				<input
+					onChange={(event) => setInput('name', event.target.value)}
+					style={styles.input}
+					value={formState.name}
+					placeholder="Name"
+				/>
+				<input
+					onChange={(event) => setInput('description', event.target.value)}
+					style={styles.input}
+					value={formState.description}
+					placeholder="Description"
+				/>
+				<button disabled style={styles.button} onClick={addTodo}>
+					Create Item
+				</button>
+				{todos.map((todo, index) => (
+					<div key={todo.id ? todo.id : index} style={styles.todo}>
+						<p style={styles.todoName}>{todo.name}</p>
+						<p style={styles.todoDescription}>{todo.description}</p>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };
