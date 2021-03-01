@@ -38,11 +38,34 @@ class Carousel extends Component {
 			]
 		};
 	}
+
+	handleCardClick = (id, card) => {
+		let items = [ ...this.state.items ];
+
+		items[id].selected = items[id].selected ? false : true;
+
+		items.forEach((item) => {
+			if (item.id !== id) {
+				item.selected = false;
+			}
+		});
+
+		this.setState({
+			items
+		});
+	};
+
+	makeItems = (items) => {
+		return items.map((item) => {
+			return <Card item={item} onClick={(e) => this.handleCardClick(item.id, e)} key={item.id} />;
+		});
+	};
+
 	render() {
 		return (
-			<div>
-				<p>carousel works</p>
-			</div>
+			<Container fluid={true}>
+				<Row className="justify-content-around">{this.makeItems(this.state.items)}</Row>
+			</Container>
 		);
 	}
 }
