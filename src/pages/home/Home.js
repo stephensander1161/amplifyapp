@@ -6,6 +6,7 @@ import Hero from '../../components/Hero';
 
 import awsExports from '../../aws-exports';
 import { Jumbotron } from 'react-bootstrap';
+import Carousel from '../../components/Carousel';
 Amplify.configure(awsExports);
 
 const initialState = { name: '', description: '' };
@@ -47,6 +48,7 @@ const Home = (props) => {
 	return (
 		<div>
 			<Hero title={props.title} subTitle={props.subTitle} text={props.text} />
+			<Carousel />
 
 			<div style={styles.container}>
 				<h2>Shopping List</h2>
