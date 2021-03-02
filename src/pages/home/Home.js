@@ -13,6 +13,8 @@ import Carousel from '../../components/Carousel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Iframe from 'react-iframe';
+import './Home.css';
 
 Amplify.configure(awsExports);
 
@@ -59,41 +61,60 @@ const Home = (props) => {
 
 			<Container>
 				<Row>
-					<Col />
 					<Col>
-						<Card>
-							<Card.Header> {initialState.currentDateTime}</Card.Header>
-							<Card.Body>
-								<Card.Title>Shopping List</Card.Title>
-								<Card.Text>
-									<input
-										onChange={(event) => setInput('name', event.target.value)}
-										style={styles.input}
-										value={formState.name}
-										placeholder="Name"
-									/>
-									<input
-										onChange={(event) => setInput('description', event.target.value)}
-										style={styles.input}
-										value={formState.description}
-										placeholder="Description"
-									/>
-									<Button variant="primary" onClick={addTodo}>
-										Create Item
-									</Button>
-
-									{todos.map((todo, index) => (
-										<ListGroup key={todo.id ? todo.id : index} style={styles.todo}>
-											<ListGroupItem style={styles.todoName}>{todo.name}</ListGroupItem>
-											<ListGroupItem style={styles.todoDescription}>
-												{todo.description}
-											</ListGroupItem>
-										</ListGroup>
-									))}
-								</Card.Text>
-							</Card.Body>
-						</Card>
+						<Iframe
+							className="Iframe"
+							url="https://tiktok-d3ae0.web.app/"
+							width="450px"
+							height="450px"
+							id="myId"
+							display="initial"
+							position="relative"
+						/>
 					</Col>
+					<Col>
+						<Iframe
+							className="Iframe"
+							url="https://tinder-c69fd.web.app/"
+							width="550px"
+							height="700px"
+							id="myId"
+							display="initial"
+							position="relative"
+						/>
+					</Col>
+				</Row>
+				<Row>
+					<Card>
+						<Card.Header> {initialState.currentDateTime}</Card.Header>
+						<Card.Body>
+							<Card.Title>Shopping List</Card.Title>
+							<Card.Text>
+								<input
+									onChange={(event) => setInput('name', event.target.value)}
+									style={styles.input}
+									value={formState.name}
+									placeholder="Name"
+								/>
+								<input
+									onChange={(event) => setInput('description', event.target.value)}
+									style={styles.input}
+									value={formState.description}
+									placeholder="Description"
+								/>
+								<Button variant="primary" onClick={addTodo}>
+									Create Item
+								</Button>
+
+								{todos.map((todo, index) => (
+									<ListGroup key={todo.id ? todo.id : index} style={styles.todo}>
+										<ListGroupItem style={styles.todoName}>{todo.name}</ListGroupItem>
+										<ListGroupItem style={styles.todoDescription}>{todo.description}</ListGroupItem>
+									</ListGroup>
+								))}
+							</Card.Text>
+						</Card.Body>
+					</Card>
 				</Row>
 			</Container>
 		</div>
