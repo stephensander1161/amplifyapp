@@ -3,13 +3,20 @@ import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { createTodo } from '../../graphql/mutations';
 import { listTodos } from '../../graphql/queries';
 import Hero from '../../components/Hero';
-
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+import ListGroupItem from 'react-bootstrap/ListGroupItem';
+import Button from 'react-bootstrap/Button';
 import awsExports from '../../aws-exports';
 import { Jumbotron } from 'react-bootstrap';
 import Carousel from '../../components/Carousel';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 Amplify.configure(awsExports);
 
-const initialState = { name: '', description: '' };
+const initialState = { name: '', description: '', currentDateTime: Date().toLocaleString() };
 
 const Home = (props) => {
 	const [ formState, setFormState ] = useState(initialState);
@@ -50,30 +57,45 @@ const Home = (props) => {
 			<Hero title={props.title} subTitle={props.subTitle} text={props.text} />
 			<Carousel />
 
-			<div style={styles.container}>
-				<h2>Shopping List</h2>
-				<input
-					onChange={(event) => setInput('name', event.target.value)}
-					style={styles.input}
-					value={formState.name}
-					placeholder="Name"
-				/>
-				<input
-					onChange={(event) => setInput('description', event.target.value)}
-					style={styles.input}
-					value={formState.description}
-					placeholder="Description"
-				/>
-				<button disabled style={styles.button} onClick={addTodo}>
-					Create Item
-				</button>
-				{todos.map((todo, index) => (
-					<div key={todo.id ? todo.id : index} style={styles.todo}>
-						<p style={styles.todoName}>{todo.name}</p>
-						<p style={styles.todoDescription}>{todo.description}</p>
-					</div>
-				))}
-			</div>
+			<Container>
+				<Row>
+					<Col />
+					<Col>
+						<Card>
+							<Card.Header> {initialState.currentDateTime}</Card.Header>
+							<Card.Body>
+								<Card.Title>Shopping List</Card.Title>
+								<Card.Text>
+									<input
+										onChange={(event) => setInput('name', event.target.value)}
+										style={styles.input}
+										value={formState.name}
+										placeholder="Name"
+									/>
+									<input
+										onChange={(event) => setInput('description', event.target.value)}
+										style={styles.input}
+										value={formState.description}
+										placeholder="Description"
+									/>
+									<Button variant="primary" onClick={addTodo}>
+										Create Item
+									</Button>
+
+									{todos.map((todo, index) => (
+										<ListGroup key={todo.id ? todo.id : index} style={styles.todo}>
+											<ListGroupItem style={styles.todoName}>{todo.name}</ListGroupItem>
+											<ListGroupItem style={styles.todoDescription}>
+												{todo.description}
+											</ListGroupItem>
+										</ListGroup>
+									))}
+								</Card.Text>
+							</Card.Body>
+						</Card>
+					</Col>
+				</Row>
+			</Container>
 		</div>
 	);
 };

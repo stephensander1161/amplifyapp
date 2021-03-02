@@ -18,8 +18,7 @@ class App extends React.Component {
 			headerLinks: [
 				{ title: 'Home', path: '/' },
 				{ title: 'About', path: '/about' },
-				{ title: 'Contact', path: '/contact' },
-				{ title: 'Observer', path: 'https://observermovie.ca' }
+				{ title: 'Contact', path: '/contact' }
 			],
 			home: {
 				title: 'Be Relentless',
@@ -64,10 +63,13 @@ class App extends React.Component {
 						<Navbar.Collapse id="navbar-toggle">
 							<Nav className="ml-auto">
 								<a className="nav-link" href="https://observermovie.ca">
-									Observer
+									Observer &nbsp; ●
+								</a>
+								<a className="nav-link" href="https://db-file-sharing.web.app/">
+									Pro DB Audio &nbsp; ●
 								</a>
 								<a className="nav-link" href="http://tfpweddings.ca">
-									TFP Weddings
+									TFP Weddings &nbsp; ●
 								</a>
 								<a className="nav-link" href="https://www.stbernardsparish.ca/">
 									OLA/St Bernard's Parish
