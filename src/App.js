@@ -62,7 +62,7 @@ class App extends React.Component {
 						<Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
 						<Navbar.Collapse id="navbar-toggle">
 							<Nav className="ml-auto">
-								<a className="nav-link" href="https://observermovie.ca">
+								<a className="nav-link" href="https://observerfilm.ca">
 									Observer &nbsp; ●
 								</a>
 								<a className="nav-link" href="https://db-file-sharing.web.app/">
