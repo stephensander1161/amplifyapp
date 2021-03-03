@@ -60,55 +60,8 @@ const Home = (props) => {
 			<Carousel />
 
 			<Container>
-				<Row>
-					<Card className="jeoCard">
-						<Card.Header>9ineTo5ive</Card.Header>
-						<Iframe
-							className="Iframe"
-							url="https://ninetofive-8e8cb.web.app/welcome/"
-							width="1050px"
-							height="750px"
-							display="initial"
-							position="relative"
-						/>
-					</Card>
-				</Row>
-				<Row>
-					<Card className="jeoCard">
-						<Card.Header>Jeopardy App</Card.Header>
-						<Iframe
-							className="Iframe"
-							url="https://jeopardy-c8122.web.app/"
-							width="1050px"
-							height="750px"
-							display="initial"
-							position="relative"
-						/>
-					</Card>
-				</Row>
-
-				<Row>
-					<Col>
-						<Iframe
-							className="Iframe"
-							url="https://tiktok-d3ae0.web.app/"
-							width="450px"
-							height="450px"
-							display="initial"
-							position="relative"
-						/>
-					</Col>
-					<Col>
-						<Iframe
-							className="Iframe"
-							url="https://tinder-c69fd.web.app/"
-							width="550px"
-							height="700px"
-							display="initial"
-							position="relative"
-						/>
-					</Col>
-				</Row>
+				
+				
 				<Row>
 					<Card>
 						<Card.Header> {initialState.currentDateTime}</Card.Header>

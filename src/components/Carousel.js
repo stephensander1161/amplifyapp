@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import observer from '../assets/images/observer.jpg';
+import observer from '../assets/images/observer-cropped.jpg';
 import db from '../assets/images/db.jpg';
-import tfp from '../assets/images/tfp.jpg';
+import ninetofive1 from '../assets/images/ninetofive1.png';
+import tfp from '../assets/images/tfp-cropped.jpg';
+import port from '../assets/images/port.png';
 import ola from '../assets/images/ola.jpg';
+import tiktok from '../assets/images/tiktok.png';
+import tinder from '../assets/images/tinder.png';
+
+import jeo from '../assets/images/jeopardy.png';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Card from '../components/Card';
@@ -15,7 +21,7 @@ class Carousel extends Component {
 				{
 					id: 0,
 					title: 'Observer',
-					subTitle: 'Website built with React and hosted by Firebase',
+					subTitle: 'React, EmailJS, Firebase, ',
 					imgSrc: observer,
 					link: 'https://observerfilm.ca',
 					selected: false
@@ -23,25 +29,71 @@ class Carousel extends Component {
 				{
 					id: 1,
 					title: 'Pro DB Audio',
-					subTitle: 'File Sharing App',
+					subTitle: 'React, Node.js, MongoDB, AWS, SendGrid ',
 					imgSrc: db,
 					link: 'https://db-filesharing.web.app/',
 					selected: false
 				},
-				{
+
+					{
 					id: 2,
+					title: "St Bernard's/OLA ",
+					subTitle: 'Wordpress',
+					imgSrc: ola,
+					link: 'https://www.stbernardsparish.ca/',
+					selected: false
+				},
+				
+				{
+					id: 3,
+					title: '9ineTo5ive',
+					subTitle: 'Angular, Ionic, Node.js MongoDB',
+					imgSrc: ninetofive1,
+					link: 'https://ninetofive-8e8cb.web.app/welcome',
+					selected: false
+				},
+				
+				{
+					id: 4,
+					title: 'Jeopardy!',
+					subTitle: 'React, Material-UI, Node.js & MongoDB',
+					imgSrc: jeo,
+					link: 'https://jeopardy-c8122.web.app/',
+					selected: false
+				},
+				{
+					id: 5,
 					title: 'TFP Weddings',
-					subTitle: 'Calgary Videographers',
+					subTitle: 'Wordpress',
 					imgSrc: tfp,
 					link: 'http://www.tfpweddings.ca/',
 					selected: false
 				},
+
+			
+				
 				{
-					id: 3,
-					title: "St Bernard's/OLA ",
-					subTitle: 'Parish in Bowness Region',
-					imgSrc: ola,
-					link: 'https://www.stbernardsparish.ca/',
+					id: 6,
+					title: 'TikTok Feature',
+					subTitle: 'React, Node.js, MongoDB',
+					imgSrc: tiktok,
+					link: 'https://tiktok-d3ae0.web.app/',
+					selected: false
+				},
+				{
+					id: 7,
+					title: "Swipe Feature ",
+					subTitle: 'React, Node.js, MongoDB',
+					imgSrc: tinder,
+					link: 'https://tinder-c69fd.web.app/',
+					selected: false
+				},
+				{
+					id: 8,
+					title: "Portfolio Page ",
+					subTitle: 'React, Bootstrap, AWS Amplify',
+					imgSrc: port,
+					link: 'https://stephensanderportfolio.ca',
 					selected: false
 				}
 			]
