@@ -21,7 +21,7 @@ class App extends React.Component {
 				{ title: 'Contact', path: '/contact' }
 			],
 			home: {
-				title: 'Be Relentless',
+				title: 'Full Stack',
 				subTitle: 'Projects that make a difference',
 				text: 'Checkout my projects below'
 			},
@@ -38,8 +38,8 @@ class App extends React.Component {
 		return (
 			<Router>
 				<Container className="p-0" fluid={true}>
-					<Navbar className="border-bottom" bg="transparent" expand="lg">
-						<Navbar.Brand>Stephen Sander</Navbar.Brand>
+					<Navbar id="navbar" className="border-bottom" bg="light" expand="lg">
+						<Navbar.Brand>Created and Managed by Stephen Sander</Navbar.Brand>
 
 						<Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
 						<Navbar.Collapse id="navbar-toggle">
@@ -54,13 +54,6 @@ class App extends React.Component {
 									Contact
 								</Link>
 							</Nav>
-						</Navbar.Collapse>
-					</Navbar>
-					<Navbar className="border-bottom" bg="transparent" expand="lg">
-						<Navbar.Brand>Sites Created and Managed by Me</Navbar.Brand>
-
-						<Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
-						<Navbar.Collapse id="navbar-toggle">
 							<Nav className="ml-auto">
 								<a className="nav-link" href="https://observerfilm.ca">
 									Observer &nbsp; ●
