@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import observer from '../assets/images/observer-cropped.jpg';
 import db from '../assets/images/db.jpg';
 import ninetofive1 from '../assets/images/ninetofive1.png';
-import tfp2 from '../assets/images/tfp-cropped2.jpg';
+import tfp from '../assets/images/tfp-cropped.jpg';
 import port from '../assets/images/port.png';
 import ola from '../assets/images/ola.jpg';
 import tiktok from '../assets/images/tiktok.png';
 import tinder from '../assets/images/tinder.png';
 import list from '../assets/images/list.png';
-import './Carousel.css'
 
 import jeo from '../assets/images/jeopardy.png';
 import Container from 'react-bootstrap/Container';
@@ -31,7 +30,7 @@ class Carousel extends Component {
 				{
 					id: 1,
 					title: 'Pro DB Audio',
-					subTitle: 'React, Node.js, MongoDB, AWS S3, SendGrid ',
+					subTitle: 'React, Node.js, MongoDB, AWS, SendGrid ',
 					imgSrc: db,
 					link: 'https://db-filesharing.web.app/',
 					selected: false
@@ -67,10 +66,13 @@ class Carousel extends Component {
 					id: 5,
 					title: 'TFP Weddings',
 					subTitle: 'Wordpress',
-					imgSrc: tfp2,
+					imgSrc: tfp,
 					link: 'http://www.tfpweddings.ca/',
 					selected: false
 				},
+
+			
+				
 				{
 					id: 6,
 					title: 'TikTok Feature',
@@ -90,13 +92,13 @@ class Carousel extends Component {
 				{
 					id: 8,
 					title: "Shopping List",
-					subTitle: 'Vue, AWS Cognito, graphQL, AWS Amplify',
+					subTitle: 'Vue, graphQL, AWS Amplify',
 					imgSrc: list,
 					link: 'https://main.d2zkvhs8jxc39f.amplifyapp.com/',
 					selected: false
 				},
 				{
-					id: 9,
+					id: 89,
 					title: "Portfolio Page ",
 					subTitle: 'React, Bootstrap, AWS Amplify',
 					imgSrc: port,
