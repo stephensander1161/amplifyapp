@@ -1,0 +1,31 @@
+.nav {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+}
+
+
+#nav {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+
+}
+
+.links {
+	padding: 9px;
+	color: black;
+}
+
+.links:hover {
+	color: grey;
+	text-decoration: none;
+}
+
+.links:selected{
+	color: brown;
+}
+
+
