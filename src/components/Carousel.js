@@ -7,6 +7,7 @@ import port from '../assets/images/port.png';
 import ola from '../assets/images/ola.jpg';
 import tiktok from '../assets/images/tiktok.png';
 import tinder from '../assets/images/tinder.png';
+import list from '../assets/images/list.png';
 
 import jeo from '../assets/images/jeopardy.png';
 import Container from 'react-bootstrap/Container';
@@ -90,6 +91,14 @@ class Carousel extends Component {
 				},
 				{
 					id: 8,
+					title: "Shopping List",
+					subTitle: 'Vue, graphQL, AWS Amplify',
+					imgSrc: list,
+					link: 'https://main.d2zkvhs8jxc39f.amplifyapp.com/',
+					selected: false
+				},
+				{
+					id: 89,
 					title: "Portfolio Page ",
 					subTitle: 'React, Bootstrap, AWS Amplify',
 					imgSrc: port,
