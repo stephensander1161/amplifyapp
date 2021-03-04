@@ -22,7 +22,6 @@ code {
 
 .s-card {
 	margin: 20px;
-	 
 }
 
 .s-card-image {
@@ -31,12 +30,6 @@ code {
 	height: 480px;
 	box-shadow: 0px 0px 3px 1px #ccc;
 	object-fit: cover;
-}
-
-.s-card-image:hover {
-	border-style: solid;
-    border-color: teal;
-	border-width: medium;
 }
 
 .s-card-info {
