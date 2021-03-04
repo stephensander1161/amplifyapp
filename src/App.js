@@ -56,13 +56,13 @@ class App extends React.Component {
 							</Nav>
 							<Nav className="ml-auto">
 								<a className="nav-link" href="https://observerfilm.ca">
-									Observer &nbsp; ●
+									Observer 
 								</a>
 								<a className="nav-link" href="https://db-filesharing.web.app/">
-									Pro DB Audio &nbsp; ●
+									Pro DB Audio 
 								</a>
 								<a className="nav-link" href="http://tfpweddings.ca">
-									TFP Weddings &nbsp; ●
+									TFP Weddings 
 								</a>
 								<a className="nav-link" href="https://www.stbernardsparish.ca/">
 									OLA/St Bernard's Parish

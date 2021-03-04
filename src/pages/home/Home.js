@@ -12,7 +12,10 @@ const Home = (props) => {
 
 	return (
 		<div>
-			<Hero title={props.title} subTitle={props.subTitle} text={props.text} />
+			<div className="banner">
+			<Hero  title={props.title} subTitle={props.subTitle} text={props.text} />
+
+			</div>
 			<Carousel />
 
 			

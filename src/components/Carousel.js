@@ -123,6 +123,8 @@ class Carousel extends Component {
 		this.setState({
 			items
 		});
+
+		window.open(card.link, "_blank")
 	};
 
 	makeItems = (items) => {
