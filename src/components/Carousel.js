@@ -30,7 +30,7 @@ class Carousel extends Component {
 				{
 					id: 1,
 					title: 'Pro DB Audio',
-					subTitle: 'React, Node.js, MongoDB, AWS, SendGrid ',
+					subTitle: 'React, Node.js, MongoDB, AWS S3, SendGrid ',
 					imgSrc: db,
 					link: 'https://db-filesharing.web.app/',
 					selected: false
@@ -92,7 +92,7 @@ class Carousel extends Component {
 				{
 					id: 8,
 					title: "Shopping List",
-					subTitle: 'Vue, graphQL, AWS Amplify',
+					subTitle: 'Vue, AWS Cognito, graphQL, AWS Amplify',
 					imgSrc: list,
 					link: 'https://main.d2zkvhs8jxc39f.amplifyapp.com/',
 					selected: false
