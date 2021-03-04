@@ -1,10 +1,15 @@
 import React from 'react';
 import Hero from '../../components/Hero';
 import Content from '../../components/Content';
+import profile from '../../assets/images/profile-cropped.png';
+import './About.css';
+
 function About(props) {
 	return (
 		<div>
 			<Hero title={props.title} />
+			<img className="about-profile" src={profile} alt={profile} />
+
 			<Content>
 				I’ve recently graduated from SAIT’s Object Oriented Software Development Program in Calgary AB and I’ve
 				been working freelance for my practicum employer for the past five months. I’m excited to further my

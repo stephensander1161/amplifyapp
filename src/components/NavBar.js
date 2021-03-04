@@ -1,26 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
+	const [ expanded, setExpanded ] = useState(false);
+
 	return (
 		<div>
-			<Navbar id="navbar" className="border-bottom" bg="light" expand="lg">
+			<Navbar expanded={expanded} id="navbar" className="border-bottom" bg="light" expand="lg">
 				<Navbar.Brand>Stephen Sander</Navbar.Brand>
 
-				<Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
+				<Navbar.Toggle
+					onClick={() => setExpanded(expanded ? false : 'expanded')}
+					className="border-0"
+					aria-controls="navbar-toggle"
+				/>
 				<Navbar.Collapse id="navbar-toggle">
 					<Nav className="ml-auto">
-						<Link className="nav-link text-success" to="/">
+						<Link onClick={() => setExpanded(false)} className="nav-link text-success" to="/">
 							Home
 						</Link>
 
-						<Link className="nav-link text-success" to="/about">
+						<Link onClick={() => setExpanded(false)} className="nav-link text-success" to="/about">
 							About
 						</Link>
-						<Link className="nav-link text-success" to="/contact">
+						<Link onClick={() => setExpanded(false)} className="nav-link text-success" to="/contact">
 							Contact
 						</Link>
 					</Nav>
