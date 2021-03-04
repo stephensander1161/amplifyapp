@@ -1,34 +1,28 @@
-import React, { useState } from 'react';
-import Nav from 'react-bootstrap/Nav';
+import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import './NavBar.css';
-import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 
 function NavBar() {
-	const [ expanded, setExpanded ] = useState(false);
-
 	return (
-		<div>
-			<Navbar expanded={expanded} id="navbar" className="border-bottom" bg="light" expand="lg">
+		<Container className="p-0" fluid={true}>
+			<Navbar collapseOnSelect id="navbar" className="border-bottom" bg="light" expand="lg">
 				<Navbar.Brand>Stephen Sander</Navbar.Brand>
 
-				<Navbar.Toggle
-					onClick={() => setExpanded(expanded ? false : 'expanded')}
-					className="border-0"
-					aria-controls="navbar-toggle"
-				/>
+				<Navbar.Toggle className="border-0" aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="navbar-toggle">
 					<Nav className="ml-auto">
-						<Link onClick={() => setExpanded(false)} className="nav-link text-success" to="/">
+						<Nav.Link className="nav-link text-success" href="/">
 							Home
-						</Link>
+						</Nav.Link>
 
-						<Link onClick={() => setExpanded(false)} className="nav-link text-success" to="/about">
+						<Nav.Link className="nav-link text-success" href="/about">
 							About
-						</Link>
-						<Link onClick={() => setExpanded(false)} className="nav-link text-success" to="/contact">
+						</Nav.Link>
+						<Nav.Link className="nav-link text-success" href="/contact">
 							Contact
-						</Link>
+						</Nav.Link>
 					</Nav>
 					<Nav className="ml-auto">
 						<a className="nav-link" href="https://observerfilm.ca">
@@ -46,7 +40,7 @@ function NavBar() {
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
-		</div>
+		</Container>
 	);
 }
 
