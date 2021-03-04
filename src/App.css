@@ -5,12 +5,13 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-<<<<<<< HEAD
-=======
 #navbar {
 	position: fixed;
 	top: 0px;
 	width: 100%;
 	z-index: 1;
 }
->>>>>>> parent of 37d55ac6 (added border to cards and making navbar more animated)
+
+#navbar.active {
+	
+}
