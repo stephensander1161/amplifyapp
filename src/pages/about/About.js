@@ -9,7 +9,7 @@ function About(props) {
 			<img className="image" src={profile} height="320px" width="220px" alt="" />
 
 			<h4 className="content">
-				I’ve recently graduated from SAIT’s Object Oriented Software Development Program in Calgary AB and I’ve
+				I graduated from SAIT’s Object Oriented Software Development Program in Calgary AB last May and I’ve
 				been working freelance for my practicum employer for the past five months. I’m excited to further my
 				career in this growing industry, I also bring 7 years of life experience in the oil and gas industry and
 				took French Immersion up to Grade 12. I’m comfortable in the remote environment and could be useful if

@@ -12,7 +12,9 @@
 }
 
 .content {
+	font-size: 30px;
 	color: white;
+	-webkit-text-stroke: 1px rgb(61, 61, 61); /* width and color */
 }
 
 .aboutContainer {
