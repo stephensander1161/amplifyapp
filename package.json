@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "aws-amplify": "^3.3.4",
     "bootstrap": "^4.6.0",
+    "emailjs-com": "^2.6.4",
     "react": "^16.13.1",
     "react-bootstrap": "^1.5.0",
     "react-dom": "^16.13.1",

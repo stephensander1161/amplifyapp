@@ -10,16 +10,6 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.contact-panorama {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-	border-radius: 1rem;
-	box-shadow: 3px 3px 3px grey;
-	margin-bottom: 15px;
-}
-
 .s-card {
 	margin: 20px;
 }

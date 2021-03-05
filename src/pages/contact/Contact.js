@@ -1,126 +1,78 @@
-import React from 'react';
-import panorama from '../../assets/images/panorama.jpg';
-
-import Form from 'react-bootstrap/Form';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import Button from 'react-bootstrap/Button';
+import './Contact.css';
+import { init } from 'emailjs-com';
+import Form from 'react-bootstrap/Form';
 
-import Hero from '../../components/Hero';
-import Content from '../../components/Content';
-import Axios from 'axios';
 
-class ContactPage extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
+function Contact() {
+	init('user_AcjqpwbLJL2GOQ6YpqZ9g');
+
+	const [ messageData, setMessageData ] = useState({
+		name: '',
+		email: '',
+		message: '',
+		subject: '',
+		disabled: false,
+		emailSent: null
+	});
+
+	function sendEmail(e) {
+		e.preventDefault();
+
+		emailjs.sendForm('service_pvy8rmp', 'template_izipfw9', e.target, 'user_AcjqpwbLJL2GOQ6YpqZ9g').then(
+			(result) => {
+				console.log(result.text);
+				alert('Message Sent!');
+			},
+			(error) => {
+				console.log(error.text);
+			}
+		);
+
+		setMessageData({
 			name: '',
 			email: '',
-			message: '',
-			disabled: false,
-			emailSent: null
-		};
+			subject: '',
+			message: ''
+		});
 	}
 
-	handleChange = (event) => {
-		const target = event.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
-		const name = target.name;
+	return (
+		<>
+		
+			<div className="page_bg">
+			<div className="contact-container">
+				<section className="contact-subscription">
+					<Form onSubmit={sendEmail}>
+						<Form.Control value={messageData.name} type="text" name="name" placeholder="Your Name" className="contact-input" onChange={(e) => setMessageData({ ...messageData, name: e.target.value })} />
+						<Form.Control value={messageData.email} type="email" name="email" placeholder="Your Email" className="contact-input" onChange={(e) => setMessageData({ ...messageData, email: e.target.value })} />
+						<Form.Control value={messageData.subject} type="text" name="subject" placeholder="Subject" className="contact-input" onChange={(e) => setMessageData({ ...messageData, subject: e.target.value })} />
 
-		this.setState({
-			[name]: value
-		});
-	};
+						<textarea
+						value={messageData.message}
+							cols="32"
+							rows="5"
+							type="text"
+							name="message"
+							placeholder="Your Message"
+							className="contact-input"
+							onChange={(e) => setMessageData({ ...messageData, message: e.target.value })}
+						/>
 
-	handleSubmit = (event) => {
-		event.preventDefault();
+						<Button className="button-primary"type="submit">Send Email</Button>
+						{messageData.emailSent === true && <p>Email Sent</p>}
+						{messageData.emailSent === false && <p>Email Not Sent</p>}
 
-		console.log(event.target);
-
-		this.setState({
-			disabled: true
-		});
-
-		Axios.post('http://localhost:3030/api/email', this.state)
-			.then((res) => {
-				if (res.data.success) {
-					this.setState({
-						disabled: false,
-						emailSent: true
-					});
-				} else {
-					this.setState({
-						disabled: false,
-						emailSent: false
-					});
-				}
-			})
-			.catch((err) => {
-				console.log(err);
-
-				this.setState({
-					disabled: false,
-					emailSent: false
-				});
-			});
-	};
-
-	render() {
-		return (
-			<div>
-				<Hero title={this.props.title} />
-				<img className="contact-panorama" src={panorama} alt={panorama} />
-
-				<Content>
-					<Form onSubmit={this.handleSubmit}>
-						<Form.Group>
-							<Form.Label htmlFor="full-name">Full Name</Form.Label>
-							<Form.Control
-								id="full-name"
-								name="name"
-								type="text"
-								value={this.state.name}
-								onChange={this.handleChange}
-							/>
-						</Form.Group>
-
-						<Form.Group>
-							<Form.Label htmlFor="email">Email</Form.Label>
-							<Form.Control
-								id="email"
-								name="email"
-								type="email"
-								value={this.state.email}
-								onChange={this.handleChange}
-							/>
-						</Form.Group>
-
-						<Form.Group>
-							<Form.Label htmlFor="message">Message</Form.Label>
-							<Form.Control
-								id="message"
-								name="message"
-								as="textarea"
-								rows="3"
-								value={this.state.message}
-								onChange={this.handleChange}
-							/>
-						</Form.Group>
-
-						<Button
-							className="d-inline-block"
-							variant="primary"
-							type="submit"
-							disabled={this.state.disabled}
-						>
-							Send
-						</Button>
-
-						{this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
-						{this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
 					</Form>
-				</Content>
+				</section>
+			
 			</div>
-		);
-	}
+		</div>
+			</>
+		
+	);
 }
 
-export default ContactPage;
+export default Contact;
