@@ -1,0 +1,8 @@
+img.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	width: 200px;
+	border-radius: 1rem;
+	margin-top: 20px;
+}

@@ -43,8 +43,11 @@ function Contact() {
 		<>
 		
 			<div className="page_bg">
+				
 			<div className="contact-container">
 				<section className="contact-subscription">
+										<h1 className="contactTitle">Get in touch</h1>
+
 					<Form onSubmit={sendEmail}>
 						<Form.Control value={messageData.name} type="text" name="name" placeholder="Your Name" className="contact-input" onChange={(e) => setMessageData({ ...messageData, name: e.target.value })} />
 						<Form.Control value={messageData.email} type="email" name="email" placeholder="Your Email" className="contact-input" onChange={(e) => setMessageData({ ...messageData, email: e.target.value })} />

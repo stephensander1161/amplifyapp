@@ -35,6 +35,7 @@ class App extends React.Component {
 
 	render() {
 		return (
+			<>
 			<Router>
 				<Container className="p-0" fluid={true}>
 					<Navbar collapseOnSelect id="navbar" className="border-bottom" bg="light" expand="lg">
@@ -82,9 +83,11 @@ class App extends React.Component {
 					<Route path="/about" render={() => <About title={this.state.about.title} />} />
 					<Route path="/contact" render={() => <Contact title={this.state.contact.title} />} />
 
-					<Footer />
 				</Container>
 			</Router>
+			<Footer />
+			</>
+
 		);
 	}
 }

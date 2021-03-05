@@ -1,16 +1,14 @@
 import React from 'react';
-import Hero from '../../components/Hero';
-import Content from '../../components/Content';
-import profile from '../../assets/images/profile-cropped2.jpg';
 import './About.css';
+import profile from '../../assets/images/profile-cropped2.jpg';
 
 function About(props) {
 	return (
-		<div>
-			<Hero title={props.title} />
-			<img className="about-profile" src={profile} alt={profile} />
+		<div className="aboutContainer">
+			<h1 className="aboutTitle">About</h1>
+			<img className="image" src={profile} height="320px" width="220px" alt="" />
 
-			<Content>
+			<h4 className="content">
 				I’ve recently graduated from SAIT’s Object Oriented Software Development Program in Calgary AB and I’ve
 				been working freelance for my practicum employer for the past five months. I’m excited to further my
 				career in this growing industry, I also bring 7 years of life experience in the oil and gas industry and
@@ -20,7 +18,7 @@ function About(props) {
 				learning React as well. On the backend, I have experience with ASP.NET Core EF, MongoDB, MySQL, RESTful
 				Web Services, AWS and many others. Please see my resume for a more detailed list. To schedule an
 				interview give me a call at (403) 671-6904 or send me an email at stephen.sander1@gmail.com.
-			</Content>
+			</h4>
 		</div>
 	);
 }

@@ -4,6 +4,15 @@
 	display: table;
 	width: 100%;
 }
+
+.contactTitle {
+	justify-content: center;
+	color: white;
+	margin-bottom: 30px;
+	font-size: 100px;
+	-webkit-text-stroke: 2px black; /* width and color */
+}
+
 .contact-container {
 	background-color: #242424;
 	padding: 4rem 0 2rem 0;
