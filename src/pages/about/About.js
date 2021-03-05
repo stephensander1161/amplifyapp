@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../../components/Hero';
 import Content from '../../components/Content';
-import profile from '../../assets/images/profile-cropped.png';
+import profile from '../../assets/images/profile-cropped2.jpg';
 import './About.css';
 
 function About(props) {
